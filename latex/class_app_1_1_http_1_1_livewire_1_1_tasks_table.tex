@@ -1,0 +1,96 @@
+\doxysection{Tasks\+Table Class Reference}
+\hypertarget{class_app_1_1_http_1_1_livewire_1_1_tasks_table}{}\label{class_app_1_1_http_1_1_livewire_1_1_tasks_table}\index{TasksTable@{TasksTable}}
+Inheritance diagram for Tasks\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_http_1_1_livewire_1_1_tasks_table}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a9be5e0bdb5720efed6ddb6426c5c16ee}{configure}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a344fcd0f65f9203172dd0f9c40d30a33}{builder}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_livewire_1_1_tasks_table_af51d6643041f096a2e0230a214c0b971}{get\+Table\+Heading}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a0b00fa815a8b22735b1db79cd177ef45}{columns}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a08fdd91bde255dbe3e2d15a22d9663e8}\label{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a08fdd91bde255dbe3e2d15a22d9663e8} 
+{\bfseries \$model} = Task\+::class
+\item 
+\Hypertarget{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a980b440b9984f3e17e3824f0197f68a7}\label{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a980b440b9984f3e17e3824f0197f68a7} 
+{\bfseries \$listeners} = \mbox{[}\textquotesingle{}refresh\+Datatable\textquotesingle{} =$>$ \textquotesingle{}\$refresh\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a344fcd0f65f9203172dd0f9c40d30a33}\index{TasksTable@{TasksTable}!builder@{builder}}
+\index{builder@{builder}!TasksTable@{TasksTable}}
+\doxysubsubsection{\texorpdfstring{builder()}{builder()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a344fcd0f65f9203172dd0f9c40d30a33} 
+builder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Define la consulta base que alimenta la tabla.
+
+Filtra las tareas dependiendo del rol del empleado autenticado\+:
+\begin{DoxyItemize}
+\item Si no es un operador, muestra todas.
+\item Si es operador, muestra solo sus tareas no completadas.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Builder Consulta Eloquent configurada. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a0b00fa815a8b22735b1db79cd177ef45}\index{TasksTable@{TasksTable}!columns@{columns}}
+\index{columns@{columns}!TasksTable@{TasksTable}}
+\doxysubsubsection{\texorpdfstring{columns()}{columns()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a0b00fa815a8b22735b1db79cd177ef45} 
+columns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Define las columnas que se muestran en la tabla.
+
+Incluye\+:
+\begin{DoxyItemize}
+\item ID de la tarea.
+\item Descripción con límite de caracteres.
+\item Estado con badge visual.
+\item Usuario asociado.
+\item Operador asignado.
+\item Acciones disponibles.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+array Listado de columnas de la tabla. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a9be5e0bdb5720efed6ddb6426c5c16ee}\index{TasksTable@{TasksTable}!configure@{configure}}
+\index{configure@{configure}!TasksTable@{TasksTable}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_livewire_1_1_tasks_table_a9be5e0bdb5720efed6ddb6426c5c16ee} 
+configure (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Configura opciones básicas de la tabla como paginación y estilos.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_livewire_1_1_tasks_table_af51d6643041f096a2e0230a214c0b971}\index{TasksTable@{TasksTable}!getTableHeading@{getTableHeading}}
+\index{getTableHeading@{getTableHeading}!TasksTable@{TasksTable}}
+\doxysubsubsection{\texorpdfstring{getTableHeading()}{getTableHeading()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_livewire_1_1_tasks_table_af51d6643041f096a2e0230a214c0b971} 
+get\+Table\+Heading (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Devuelve el encabezado personalizado de la tabla, incluyendo un botón de creación.
+
+\begin{DoxyReturn}{Returns}
+string HTML renderizado del encabezado. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Livewire/Tasks\+Table.\+php\end{DoxyCompactItemize}

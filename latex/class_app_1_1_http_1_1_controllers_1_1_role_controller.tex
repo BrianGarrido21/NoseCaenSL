@@ -1,0 +1,148 @@
+\doxysection{Role\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_role_controller}\index{RoleController@{RoleController}}
+Inheritance diagram for Role\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_role_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_a15212abfe5e9e79c07684eabc3d7098f}{store}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_role_request}{Role\+Request}} \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_a26d0be5da6623c6e66efb28781becb30}{show}} (Role \$role)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_a26979831f2877847dcbdaf3e7cadb08d}{edit}} (Role \$role)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_ae055cb89ead14c55b1cb980b7a1a8c2c}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_role_request}{Role\+Request}} \$request, Role \$role)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_role_controller_ab48969a2a8d4608dfe82af205651097f}{destroy}} (Role \$role)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_a095c5d389db211932136b53f25f39685}\index{RoleController@{RoleController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_a095c5d389db211932136b53f25f39685} 
+\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Constructor que aplica middleware de permisos según la acción. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}\index{RoleController@{RoleController}!create@{create}}
+\index{create@{create}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_a435e7d7525d4bcd0ed5e34a469f3adf6} 
+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para crear un nuevo rol.
+
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de creación de rol. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_ab48969a2a8d4608dfe82af205651097f}\index{RoleController@{RoleController}!destroy@{destroy}}
+\index{destroy@{destroy}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_ab48969a2a8d4608dfe82af205651097f} 
+destroy (\begin{DoxyParamCaption}\item[{Role}]{\$role}{}\end{DoxyParamCaption})}
+
+Elimina un rol del sistema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Role & {\em \$role} & Rol a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_a26979831f2877847dcbdaf3e7cadb08d}\index{RoleController@{RoleController}!edit@{edit}}
+\index{edit@{edit}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_a26979831f2877847dcbdaf3e7cadb08d} 
+edit (\begin{DoxyParamCaption}\item[{Role}]{\$role}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para editar un rol.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Role & {\em \$role} & Rol a editar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de edición del rol. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_a149eb92716c1084a935e04a8d95f7347}\index{RoleController@{RoleController}!index@{index}}
+\index{index@{index}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra la lista paginada de roles.
+
+\begin{DoxyReturn}{Returns}
+View Vista con el listado de roles. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_a26d0be5da6623c6e66efb28781becb30}\index{RoleController@{RoleController}!show@{show}}
+\index{show@{show}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_a26d0be5da6623c6e66efb28781becb30} 
+show (\begin{DoxyParamCaption}\item[{Role}]{\$role}{}\end{DoxyParamCaption})}
+
+Muestra los detalles de un rol específico.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Role & {\em \$role} & Rol a mostrar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista con los detalles del rol. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_a15212abfe5e9e79c07684eabc3d7098f}\index{RoleController@{RoleController}!store@{store}}
+\index{store@{store}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_a15212abfe5e9e79c07684eabc3d7098f} 
+store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_role_request}{Role\+Request}}}]{\$request}{}\end{DoxyParamCaption})}
+
+Guarda un nuevo rol y sincroniza sus permisos.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Role\+Request & {\em \$request} & Datos validados del rol.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_role_controller_ae055cb89ead14c55b1cb980b7a1a8c2c}\index{RoleController@{RoleController}!update@{update}}
+\index{update@{update}!RoleController@{RoleController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_role_controller_ae055cb89ead14c55b1cb980b7a1a8c2c} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_role_request}{Role\+Request}}}]{\$request}{, }\item[{Role}]{\$role}{}\end{DoxyParamCaption})}
+
+Actualiza los datos de un rol y sincroniza sus permisos.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Role\+Request & {\em \$request} & Datos validados del rol. \\
+\hline
+Role & {\em \$role} & Rol a actualizar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Role\+Controller.\+php\end{DoxyCompactItemize}

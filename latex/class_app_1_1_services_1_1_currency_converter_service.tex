@@ -1,0 +1,41 @@
+\doxysection{Currency\+Converter\+Service Class Reference}
+\hypertarget{class_app_1_1_services_1_1_currency_converter_service}{}\label{class_app_1_1_services_1_1_currency_converter_service}\index{CurrencyConverterService@{CurrencyConverterService}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_services_1_1_currency_converter_service_a7e20cccedad34fe195f24234a8920f5d}{convert}} (float \$amount, string \$from)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_app_1_1_services_1_1_currency_converter_service_a3be7afad5213c6b450e8fff23c312abb}\label{class_app_1_1_services_1_1_currency_converter_service_a3be7afad5213c6b450e8fff23c312abb} 
+string {\bfseries \$api\+Url} = \textquotesingle{}https\+://latest.\+currency-\/api.\+pages.\+dev/v1/currencies/eur.\+json\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_services_1_1_currency_converter_service_a7e20cccedad34fe195f24234a8920f5d}\index{CurrencyConverterService@{CurrencyConverterService}!convert@{convert}}
+\index{convert@{convert}!CurrencyConverterService@{CurrencyConverterService}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily \label{class_app_1_1_services_1_1_currency_converter_service_a7e20cccedad34fe195f24234a8920f5d} 
+convert (\begin{DoxyParamCaption}\item[{float}]{\$amount}{, }\item[{string}]{\$from}{}\end{DoxyParamCaption})}
+
+Convierte un monto de una moneda específica a EUR.
+
+Si no se puede obtener la tasa de cambio, retorna null.
+
+
+\begin{DoxyParams}[1]{Parameters}
+float & {\em \$amount} & Monto a convertir. \\
+\hline
+string & {\em \$from} & Código de la moneda de origen (por ejemplo, "{}\+USD"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float\texorpdfstring{$\vert$}{|}null Monto convertido a EUR o null si falla la conversión. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Services/Currency\+Converter\+Service.\+php\end{DoxyCompactItemize}

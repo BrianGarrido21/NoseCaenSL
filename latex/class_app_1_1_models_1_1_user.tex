@@ -1,0 +1,106 @@
+\doxysection{User Class Reference}
+\hypertarget{class_app_1_1_models_1_1_user}{}\label{class_app_1_1_models_1_1_user}\index{User@{User}}
+Inheritance diagram for User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_models_1_1_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_a46ddc893b380917dbb661f16ae8ec7ee}{country}} ()
+\item 
+\Hypertarget{class_app_1_1_models_1_1_user_a98ffb8d1de81f2d9d4df39d0fa150ed6}\label{class_app_1_1_models_1_1_user_a98ffb8d1de81f2d9d4df39d0fa150ed6} 
+{\bfseries fees} ()
+\item 
+\Hypertarget{class_app_1_1_models_1_1_user_a62f47b1a4fd49b4508f46be1d32ec031}\label{class_app_1_1_models_1_1_user_a62f47b1a4fd49b4508f46be1d32ec031} 
+{\bfseries tasks} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_app_1_1_models_1_1_user_ae8876a14058f368335baccf35af4a22b}\label{class_app_1_1_models_1_1_user_ae8876a14058f368335baccf35af4a22b} 
+{\bfseries \$table} = \textquotesingle{}users\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_a6a90e74ccdf5efd70d51d10c906f8e32}{\$fillable}}
+\item 
+\Hypertarget{class_app_1_1_models_1_1_user_aedb14eef2a8d98bd9e52f5fcfa909d84}\label{class_app_1_1_models_1_1_user_aedb14eef2a8d98bd9e52f5fcfa909d84} 
+{\bfseries \$guard\+\_\+name} = \textquotesingle{}web\textquotesingle{}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_a4a374564d2858d8ae869a8fb890aad56}{\$hidden}}
+\item 
+\mbox{\hyperlink{class_app_1_1_models_1_1_user_a1649e00448c72a723c2c79fe5f915b97}{\$casts}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+OA\textbackslash{}\+Schema( schema="{}\+User"{}, type="{}object"{}, title="{}\+User"{}, description="{}\+Modelo de Usuario"{}, required=\{"{}id"{}, "{}cif"{}, "{}name"{}, "{}email"{}, "{}phone"{}, "{}address"{}, "{}country\+\_\+id"{}\}, @\+OA\textbackslash{}\+Property(property="{}id"{}, type="{}integer"{}, example=1), @\+OA\textbackslash{}\+Property(property="{}cif"{}, type="{}string"{}, example="{}\+B12345678"{}), @\+OA\textbackslash{}\+Property(property="{}name"{}, type="{}string"{}, example="{}\+Carlos Gómez"{}), @\+OA\textbackslash{}\+Property(property="{}email"{}, type="{}string"{}, example="{}carlos@example.\+com"{}), @\+OA\textbackslash{}\+Property(property="{}phone"{}, type="{}string"{}, example="{}987654321"{}), @\+OA\textbackslash{}\+Property(property="{}address"{}, type="{}string"{}, example="{}\+Avenida Principal 456"{}), @\+OA\textbackslash{}\+Property(property="{}country\+\_\+id"{}, type="{}integer"{}, example=5), @\+OA\textbackslash{}\+Property(property="{}currency\+\_\+iso"{}, type="{}string"{}, example="{}usd"{}), @\+OA\textbackslash{}\+Property(property="{}email\+\_\+verified\+\_\+at"{}, type="{}string"{}, format="{}date-\/time"{}, example="{}2024-\/06-\/01\+T12\+:00\+:00\+Z"{}), @\+OA\textbackslash{}\+Property(property="{}created\+\_\+at"{}, type="{}string"{}, format="{}date-\/time"{}, example="{}2024-\/05-\/01\+T09\+:00\+:00\+Z"{}), @\+OA\textbackslash{}\+Property(property="{}updated\+\_\+at"{}, type="{}string"{}, format="{}date-\/time"{}, example="{}2024-\/05-\/02\+T10\+:00\+:00\+Z"{}) ) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_models_1_1_user_a46ddc893b380917dbb661f16ae8ec7ee}\index{User@{User}!country@{country}}
+\index{country@{country}!User@{User}}
+\doxysubsubsection{\texorpdfstring{country()}{country()}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_user_a46ddc893b380917dbb661f16ae8ec7ee} 
+country (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Relación con el país.
+
+Se asume que en la migración de users el campo se llama {\ttfamily country\+\_\+id} y que en la tabla {\ttfamily paises} la clave primaria es {\ttfamily id}. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_app_1_1_models_1_1_user_a1649e00448c72a723c2c79fe5f915b97}\index{User@{User}!\$casts@{\$casts}}
+\index{\$casts@{\$casts}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\$casts}{\$casts}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_user_a1649e00448c72a723c2c79fe5f915b97} 
+\$casts\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'email\_verified\_at'}\ =>\ \textcolor{stringliteral}{'datetime'},}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_models_1_1_user_a6a90e74ccdf5efd70d51d10c906f8e32}\index{User@{User}!\$fillable@{\$fillable}}
+\index{\$fillable@{\$fillable}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\$fillable}{\$fillable}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_user_a6a90e74ccdf5efd70d51d10c906f8e32} 
+\$fillable\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'name'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'email'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'phone'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'credit\_card'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'cif'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'address'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'country\_id'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'currency\_iso'}}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{class_app_1_1_models_1_1_user_a4a374564d2858d8ae869a8fb890aad56}\index{User@{User}!\$hidden@{\$hidden}}
+\index{\$hidden@{\$hidden}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\$hidden}{\$hidden}}
+{\footnotesize\ttfamily \label{class_app_1_1_models_1_1_user_a4a374564d2858d8ae869a8fb890aad56} 
+\$hidden\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'password'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'remember\_token'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'created\_at'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{'updated\_at'},}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Models/User.\+php\end{DoxyCompactItemize}

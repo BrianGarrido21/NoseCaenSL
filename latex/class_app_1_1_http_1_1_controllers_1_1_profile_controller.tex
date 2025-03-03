@@ -1,0 +1,52 @@
+\doxysection{Profile\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_profile_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_profile_controller}\index{ProfileController@{ProfileController}}
+Inheritance diagram for Profile\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_profile_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_profile_controller_a5cb75cbb16467eb1768837d126dc535b}{edit}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_profile_controller_acefbab471b52b50fac2cb57f71cdfb74}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_profile_update_request}{Profile\+Update\+Request}} \$request)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_profile_controller_a5cb75cbb16467eb1768837d126dc535b}\index{ProfileController@{ProfileController}!edit@{edit}}
+\index{edit@{edit}!ProfileController@{ProfileController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_profile_controller_a5cb75cbb16467eb1768837d126dc535b} 
+edit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para editar el perfil del empleado.
+
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de edición del perfil. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_profile_controller_acefbab471b52b50fac2cb57f71cdfb74}\index{ProfileController@{ProfileController}!update@{update}}
+\index{update@{update}!ProfileController@{ProfileController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_profile_controller_acefbab471b52b50fac2cb57f71cdfb74} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_profile_update_request}{Profile\+Update\+Request}}}]{\$request}{}\end{DoxyParamCaption})}
+
+Actualiza la información del perfil del empleado autenticado.
+
+Valida los datos enviados y actualiza los campos del perfil, como nombre y correo electrónico.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Profile\+Update\+Request & {\em \$request} & Solicitud validada con los datos del perfil.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al dashboard con mensaje de éxito. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Profile\+Controller.\+php\end{DoxyCompactItemize}

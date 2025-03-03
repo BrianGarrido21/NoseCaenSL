@@ -1,0 +1,62 @@
+\doxysection{Employee\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller}\index{EmployeeController@{EmployeeController}}
+Inheritance diagram for Employee\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_adcdc562a4b278de70e4753992c1b8ecd}{store}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}} \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_abb9bc779fa2c54faf4f1aa73e80a69fd}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}} \$employee)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_af93616b12de5dfd0965f050f1f362c1e}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}} \$employee)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_a76056e1cda2834026878bdd4a0fb29cb}{destroy}} (\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}} \$employee)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+OA\textbackslash{}\+Tag( name="{}\+Employees"{}, description="{}\+API para la gestión de empleados"{} ) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_a76056e1cda2834026878bdd4a0fb29cb}\index{EmployeeController@{EmployeeController}!destroy@{destroy}}
+\index{destroy@{destroy}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_a76056e1cda2834026878bdd4a0fb29cb} 
+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}}}]{\$employee}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Delete( path="{}/api/v1/employee/\{id\}"{}, tags=\{"{}\+Employees"{}\}, summary="{}\+Eliminar un empleado"{}, description="{}\+Elimina un empleado existente"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Empleado eliminado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Employee deleted successfully"{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_a149eb92716c1084a935e04a8d95f7347}\index{EmployeeController@{EmployeeController}!index@{index}}
+\index{index@{index}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/employee"{}, tags=\{"{}\+Employees"{}\}, summary="{}\+Listar empleados"{}, description="{}\+Obtiene el listado completo de empleados"{}, @\+OA\textbackslash{}\+Response( response=200, description="{}\+Listado de empleados obtenido correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(type="{}array"{}, @\+OA\textbackslash{}\+Items(ref="{}\#/components/schemas/\+Employee"{})) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_abb9bc779fa2c54faf4f1aa73e80a69fd}\index{EmployeeController@{EmployeeController}!show@{show}}
+\index{show@{show}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_abb9bc779fa2c54faf4f1aa73e80a69fd} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}}}]{\$employee}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/employee/\{id\}"{}, tags=\{"{}\+Employees"{}\}, summary="{}\+Obtener un empleado"{}, description="{}\+Devuelve los datos de un empleado específico"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Empleado obtenido correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(ref="{}\#/components/schemas/\+Employee"{}) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_adcdc562a4b278de70e4753992c1b8ecd}\index{EmployeeController@{EmployeeController}!store@{store}}
+\index{store@{store}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_adcdc562a4b278de70e4753992c1b8ecd} 
+store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}}}]{\$request}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Post( path="{}/api/v1/employee"{}, tags=\{"{}\+Employees"{}\}, summary="{}\+Crear un empleado"{}, description="{}\+Crea un nuevo empleado con sus datos y rol"{}, @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( required=\{"{}dni"{}, "{}name"{}, "{}email"{}, "{}phone"{}, "{}address"{}, "{}password"{}, "{}role\+\_\+id"{}\}, @\+OA\textbackslash{}\+Property(property="{}dni"{}, type="{}string"{}, example="{}12345678\+A"{}), @\+OA\textbackslash{}\+Property(property="{}name"{}, type="{}string"{}, example="{}\+Juan Pérez"{}), @\+OA\textbackslash{}\+Property(property="{}email"{}, type="{}string"{}, example="{}juan@example.\+com"{}), @\+OA\textbackslash{}\+Property(property="{}phone"{}, type="{}string"{}, example="{}123456789"{}), @\+OA\textbackslash{}\+Property(property="{}address"{}, type="{}string"{}, example="{}\+Calle Falsa 123"{}), @\+OA\textbackslash{}\+Property(property="{}password"{}, type="{}string"{}, example="{}secret123"{}), @\+OA\textbackslash{}\+Property(property="{}role\+\_\+id"{}, type="{}integer"{}, example=1) ) ), @\+OA\textbackslash{}\+Response( response=201, description="{}\+Empleado creado exitosamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Employee created successfully"{}), @\+OA\textbackslash{}\+Property(property="{}employee"{}, ref="{}\#/components/schemas/\+Employee"{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_af93616b12de5dfd0965f050f1f362c1e}\index{EmployeeController@{EmployeeController}!update@{update}}
+\index{update@{update}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_employee_controller_af93616b12de5dfd0965f050f1f362c1e} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}}}]{\$employee}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Put( path="{}/api/v1/employee/\{id\}"{}, tags=\{"{}\+Employees"{}\}, summary="{}\+Actualizar un empleado"{}, description="{}\+Actualiza los datos de un empleado existente"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( required=\{"{}dni"{}, "{}name"{}, "{}email"{}, "{}phone"{}, "{}address"{}\}, @\+OA\textbackslash{}\+Property(property="{}dni"{}, type="{}string"{}, example="{}12345678\+A"{}), @\+OA\textbackslash{}\+Property(property="{}name"{}, type="{}string"{}, example="{}\+Juan Pérez"{}), @\+OA\textbackslash{}\+Property(property="{}email"{}, type="{}string"{}, example="{}juan@example.\+com"{}), @\+OA\textbackslash{}\+Property(property="{}phone"{}, type="{}string"{}, example="{}123456789"{}), @\+OA\textbackslash{}\+Property(property="{}address"{}, type="{}string"{}, example="{}\+Calle Falsa 123"{}), @\+OA\textbackslash{}\+Property(property="{}password"{}, type="{}string"{}, example="{}secret123"{}), @\+OA\textbackslash{}\+Property(property="{}role\+\_\+id"{}, type="{}integer"{}, example=2) ) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Empleado actualizado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Employee updated successfully"{}), @\+OA\textbackslash{}\+Property(property="{}employee"{}, ref="{}\#/components/schemas/\+Employee"{}) ) ) ) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/\+API/Employee\+Controller.\+php\end{DoxyCompactItemize}

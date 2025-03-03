@@ -1,0 +1,62 @@
+\doxysection{User\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller}\index{UserController@{UserController}}
+Inheritance diagram for User\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a656f80e3f7d10a68041b9c0eb6ca1841}{store}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_user_request}{User\+Request}} \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a6a4964eb0b83cafb88c6bd02f9e71020}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_user}{User}} \$user)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_af080397da5cb78faa276410fb5e6490a}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_user_request}{User\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_models_1_1_user}{User}} \$user)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a1ce9d7e767a3f3cf14e126dce7773ddb}{destroy}} (\mbox{\hyperlink{class_app_1_1_models_1_1_user}{User}} \$user)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+OA\textbackslash{}\+Tag( name="{}\+Users"{}, description="{}\+API para la gestión de Usuarios"{} ) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a1ce9d7e767a3f3cf14e126dce7773ddb}\index{UserController@{UserController}!destroy@{destroy}}
+\index{destroy@{destroy}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a1ce9d7e767a3f3cf14e126dce7773ddb} 
+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_user}{User}}}]{\$user}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Delete( path="{}/api/v1/user/\{id\}"{}, tags=\{"{}\+Users"{}\}, summary="{}\+Eliminar un Usuario"{}, description="{}\+Elimina un usuario específico"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Usuario eliminado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+User deleted successfully"{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a149eb92716c1084a935e04a8d95f7347}\index{UserController@{UserController}!index@{index}}
+\index{index@{index}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/user"{}, tags=\{"{}\+Users"{}\}, summary="{}\+Listar Usuarios"{}, description="{}\+Obtiene una lista de todos los usuarios registrados"{}, @\+OA\textbackslash{}\+Response( response=200, description="{}\+Listado de usuarios obtenido correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(type="{}array"{}, @\+OA\textbackslash{}\+Items(ref="{}\#/components/schemas/\+User"{})) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a6a4964eb0b83cafb88c6bd02f9e71020}\index{UserController@{UserController}!show@{show}}
+\index{show@{show}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a6a4964eb0b83cafb88c6bd02f9e71020} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_user}{User}}}]{\$user}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/user/\{id\}"{}, tags=\{"{}\+Users"{}\}, summary="{}\+Obtener un Usuario"{}, description="{}\+Devuelve los datos de un usuario específico"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Usuario obtenido correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(ref="{}\#/components/schemas/\+User"{}) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a656f80e3f7d10a68041b9c0eb6ca1841}\index{UserController@{UserController}!store@{store}}
+\index{store@{store}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_a656f80e3f7d10a68041b9c0eb6ca1841} 
+store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_user_request}{User\+Request}}}]{\$request}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Post( path="{}/api/v1/user"{}, tags=\{"{}\+Users"{}\}, summary="{}\+Crear un Usuario"{}, description="{}\+Crea un nuevo usuario con su información y país asociado"{}, @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( required=\{"{}cif"{}, "{}name"{}, "{}email"{}, "{}phone"{}, "{}address"{}, "{}country\+\_\+id"{}\}, @\+OA\textbackslash{}\+Property(property="{}cif"{}, type="{}string"{}, example="{}\+B12345678"{}), @\+OA\textbackslash{}\+Property(property="{}name"{}, type="{}string"{}, example="{}\+Carlos Gómez"{}), @\+OA\textbackslash{}\+Property(property="{}email"{}, type="{}string"{}, example="{}carlos@example.\+com"{}), @\+OA\textbackslash{}\+Property(property="{}phone"{}, type="{}string"{}, example="{}987654321"{}), @\+OA\textbackslash{}\+Property(property="{}address"{}, type="{}string"{}, example="{}\+Avenida Principal 456"{}), @\+OA\textbackslash{}\+Property(property="{}country\+\_\+id"{}, type="{}integer"{}, example=5) ) ), @\+OA\textbackslash{}\+Response( response=201, description="{}\+Usuario creado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+User created successfully"{}), @\+OA\textbackslash{}\+Property(property="{}user"{}, ref="{}\#/components/schemas/\+User"{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_af080397da5cb78faa276410fb5e6490a}\index{UserController@{UserController}!update@{update}}
+\index{update@{update}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_user_controller_af080397da5cb78faa276410fb5e6490a} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_user_request}{User\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_user}{User}}}]{\$user}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Put( path="{}/api/v1/user/\{id\}"{}, tags=\{"{}\+Users"{}\}, summary="{}\+Actualizar un Usuario"{}, description="{}\+Actualiza los datos de un usuario existente"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}cif"{}, type="{}string"{}, example="{}\+B12345678"{}), @\+OA\textbackslash{}\+Property(property="{}name"{}, type="{}string"{}, example="{}\+Carlos Gómez"{}), @\+OA\textbackslash{}\+Property(property="{}email"{}, type="{}string"{}, example="{}carlos@example.\+com"{}), @\+OA\textbackslash{}\+Property(property="{}phone"{}, type="{}string"{}, example="{}987654321"{}), @\+OA\textbackslash{}\+Property(property="{}address"{}, type="{}string"{}, example="{}\+Avenida Principal 456"{}), @\+OA\textbackslash{}\+Property(property="{}country\+\_\+id"{}, type="{}integer"{}, example=5) ) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Usuario actualizado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+User updated successfully"{}), @\+OA\textbackslash{}\+Property(property="{}user"{}, ref="{}\#/components/schemas/\+User"{}) ) ) ) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/\+API/User\+Controller.\+php\end{DoxyCompactItemize}

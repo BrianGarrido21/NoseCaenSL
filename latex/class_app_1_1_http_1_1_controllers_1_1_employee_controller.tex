@@ -1,0 +1,148 @@
+\doxysection{Employee\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_employee_controller}\index{EmployeeController@{EmployeeController}}
+Inheritance diagram for Employee\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_employee_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_adcdc562a4b278de70e4753992c1b8ecd}{store}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}} \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_abb9bc779fa2c54faf4f1aa73e80a69fd}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}} \$employee)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a98d07090454c35edd40a168525dd4a37}{edit}} (\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}} \$employee)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_af93616b12de5dfd0965f050f1f362c1e}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}} \$employee)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a76056e1cda2834026878bdd4a0fb29cb}{destroy}} (\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}} \$employee)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a095c5d389db211932136b53f25f39685}\index{EmployeeController@{EmployeeController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a095c5d389db211932136b53f25f39685} 
+\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Constructor que aplica los middleware de permisos según la acción. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}\index{EmployeeController@{EmployeeController}!create@{create}}
+\index{create@{create}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a435e7d7525d4bcd0ed5e34a469f3adf6} 
+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para crear un nuevo empleado.
+
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de creación. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a76056e1cda2834026878bdd4a0fb29cb}\index{EmployeeController@{EmployeeController}!destroy@{destroy}}
+\index{destroy@{destroy}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a76056e1cda2834026878bdd4a0fb29cb} 
+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}}}]{\$employee}{}\end{DoxyParamCaption})}
+
+Elimina un empleado del sistema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Employee & {\em \$employee} & Empleado a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a98d07090454c35edd40a168525dd4a37}\index{EmployeeController@{EmployeeController}!edit@{edit}}
+\index{edit@{edit}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a98d07090454c35edd40a168525dd4a37} 
+edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}}}]{\$employee}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para editar un empleado.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Employee & {\em \$employee} & Empleado a editar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de edición. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a149eb92716c1084a935e04a8d95f7347}\index{EmployeeController@{EmployeeController}!index@{index}}
+\index{index@{index}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra la lista paginada de empleados.
+
+\begin{DoxyReturn}{Returns}
+View Vista con el listado de empleados. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_abb9bc779fa2c54faf4f1aa73e80a69fd}\index{EmployeeController@{EmployeeController}!show@{show}}
+\index{show@{show}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_abb9bc779fa2c54faf4f1aa73e80a69fd} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}}}]{\$employee}{}\end{DoxyParamCaption})}
+
+Muestra los detalles de un empleado específico.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Employee & {\em \$employee} & Empleado a mostrar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista con los detalles del empleado. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_adcdc562a4b278de70e4753992c1b8ecd}\index{EmployeeController@{EmployeeController}!store@{store}}
+\index{store@{store}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_adcdc562a4b278de70e4753992c1b8ecd} 
+store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}}}]{\$request}{}\end{DoxyParamCaption})}
+
+Guarda un nuevo empleado y le asigna un rol si se proporciona.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Employee\+Request & {\em \$request} & Datos validados del empleado.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_controller_af93616b12de5dfd0965f050f1f362c1e}\index{EmployeeController@{EmployeeController}!update@{update}}
+\index{update@{update}!EmployeeController@{EmployeeController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_controller_af93616b12de5dfd0965f050f1f362c1e} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_employee_request}{Employee\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_employee}{Employee}}}]{\$employee}{}\end{DoxyParamCaption})}
+
+Actualiza la información de un empleado y sincroniza su rol.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Employee\+Request & {\em \$request} & Datos validados del empleado. \\
+\hline
+Employee & {\em \$employee} & Empleado a actualizar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito o error. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Employee\+Controller.\+php\end{DoxyCompactItemize}

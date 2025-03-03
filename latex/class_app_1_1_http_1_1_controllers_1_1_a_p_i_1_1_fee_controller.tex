@@ -1,0 +1,62 @@
+\doxysection{Fee\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller}\index{FeeController@{FeeController}}
+Inheritance diagram for Fee\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a7ccb716c16a2ecab0a454bbf048b56e0}{store}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_fee_request}{Fee\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_services_1_1_currency_converter_service}{Currency\+Converter\+Service}} \$currency\+Converter)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a0bd54acb37ed40b35edee326c1e1aa0b}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}} \$fee)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a5a2dfdcfe401c699d029cc4328fdb793}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_fee_request}{Fee\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}} \$fee)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_aed5a68b649628ced58a7ce09130f1dda}{destroy}} (\mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}} \$fee)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+OA\textbackslash{}\+Tag( name="{}\+Fees"{}, description="{}\+API para la gestión de Fees"{} ) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_aed5a68b649628ced58a7ce09130f1dda}\index{FeeController@{FeeController}!destroy@{destroy}}
+\index{destroy@{destroy}!FeeController@{FeeController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_aed5a68b649628ced58a7ce09130f1dda} 
+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}}}]{\$fee}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Delete( path="{}/api/v1/fee/\{id\}"{}, tags=\{"{}\+Fees"{}\}, summary="{}\+Eliminar un Fee"{}, description="{}\+Elimina un Fee existente"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Fee eliminado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Fee deleted successfully."{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a149eb92716c1084a935e04a8d95f7347}\index{FeeController@{FeeController}!index@{index}}
+\index{index@{index}!FeeController@{FeeController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/fee"{}, tags=\{"{}\+Fees"{}\}, summary="{}\+Listar Fees"{}, description="{}\+Devuelve una lista de todos los Fees"{}, @\+OA\textbackslash{}\+Response( response=200, description="{}\+Listado de Fees obtenido correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(type="{}array"{}, @\+OA\textbackslash{}\+Items(ref="{}\#/components/schemas/\+Fee"{})) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a0bd54acb37ed40b35edee326c1e1aa0b}\index{FeeController@{FeeController}!show@{show}}
+\index{show@{show}!FeeController@{FeeController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a0bd54acb37ed40b35edee326c1e1aa0b} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}}}]{\$fee}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/fee/\{id\}"{}, tags=\{"{}\+Fees"{}\}, summary="{}\+Obtener un Fee"{}, description="{}\+Devuelve los datos de un Fee específico"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Fee obtenido correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(ref="{}\#/components/schemas/\+Fee"{}) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a7ccb716c16a2ecab0a454bbf048b56e0}\index{FeeController@{FeeController}!store@{store}}
+\index{store@{store}!FeeController@{FeeController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a7ccb716c16a2ecab0a454bbf048b56e0} 
+store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_fee_request}{Fee\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_services_1_1_currency_converter_service}{Currency\+Converter\+Service}}}]{\$currency\+Converter}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Post( path="{}/api/v1/fee"{}, tags=\{"{}\+Fees"{}\}, summary="{}\+Crear un Fee"{}, description="{}\+Crea un nuevo Fee y envía notificación por email"{}, @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( required=\{"{}concept"{}, "{}import"{}, "{}due\+\_\+date"{}, "{}user\+\_\+id"{}\}, @\+OA\textbackslash{}\+Property(property="{}concept"{}, type="{}string"{}, example="{}\+Servicio mensual"{}), @\+OA\textbackslash{}\+Property(property="{}import"{}, type="{}number"{}, format="{}float"{}, example=100.\+50), @\+OA\textbackslash{}\+Property(property="{}due\+\_\+date"{}, type="{}string"{}, format="{}date"{}, example="{}2024-\/06-\/15"{}), @\+OA\textbackslash{}\+Property(property="{}is\+\_\+paid"{}, type="{}boolean"{}, example=false), @\+OA\textbackslash{}\+Property(property="{}user\+\_\+id"{}, type="{}integer"{}, example=1), @\+OA\textbackslash{}\+Property(property="{}notes"{}, type="{}string"{}, example="{}\+Pago pendiente"{}), @\+OA\textbackslash{}\+Property(property="{}currency\+\_\+iso"{}, type="{}string"{}, example="{}usd"{}) ) ), @\+OA\textbackslash{}\+Response( response=201, description="{}\+Fee creado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Fee created successfully."{}), @\+OA\textbackslash{}\+Property(property="{}fee"{}, ref="{}\#/components/schemas/\+Fee"{}) ) ), @\+OA\textbackslash{}\+Response( response=400, description="{}\+Error en la conversión de divisa"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}error"{}, type="{}string"{}, example="{}\+Currency conversion failed."{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a5a2dfdcfe401c699d029cc4328fdb793}\index{FeeController@{FeeController}!update@{update}}
+\index{update@{update}!FeeController@{FeeController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_fee_controller_a5a2dfdcfe401c699d029cc4328fdb793} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_fee_request}{Fee\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}}}]{\$fee}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Put( path="{}/api/v1/fee/\{id\}"{}, tags=\{"{}\+Fees"{}\}, summary="{}\+Actualizar un Fee"{}, description="{}\+Actualiza los datos de un Fee existente"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}concept"{}, type="{}string"{}, example="{}\+Servicio actualizado"{}), @\+OA\textbackslash{}\+Property(property="{}import"{}, type="{}number"{}, format="{}float"{}, example=150.\+75), @\+OA\textbackslash{}\+Property(property="{}due\+\_\+date"{}, type="{}string"{}, format="{}date"{}, example="{}2024-\/07-\/15"{}), @\+OA\textbackslash{}\+Property(property="{}is\+\_\+paid"{}, type="{}boolean"{}, example=true), @\+OA\textbackslash{}\+Property(property="{}notes"{}, type="{}string"{}, example="{}\+Pago recibido"{}), @\+OA\textbackslash{}\+Property(property="{}currency\+\_\+iso"{}, type="{}string"{}, example="{}usd"{}) ) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Fee actualizado correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Fee updated successfully."{}), @\+OA\textbackslash{}\+Property(property="{}fee"{}, ref="{}\#/components/schemas/\+Fee"{}) ) ) ) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/\+API/Fee\+Controller.\+php\end{DoxyCompactItemize}

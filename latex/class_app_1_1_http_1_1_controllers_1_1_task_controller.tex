@@ -1,0 +1,157 @@
+\doxysection{Task\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_task_controller}\index{TaskController@{TaskController}}
+Inheritance diagram for Task\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_task_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_a9ef485163104597c12185b53cdacf638}{store}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_a62d3a6a58ade72b346b2723d1be3af7c}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_a86c12b5cabb8f073dc931e7fb8d39bf3}{edit}} (\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_ad9fb03d9f39d6d8b5a1372db256072b5}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_task_request}{Task\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_task_controller_add83d33c03db39565b7287054b0fa194}{destroy}} (\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_a095c5d389db211932136b53f25f39685}\index{TaskController@{TaskController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_a095c5d389db211932136b53f25f39685} 
+\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Constructor que aplica middleware de permisos según la acción. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}\index{TaskController@{TaskController}!create@{create}}
+\index{create@{create}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_a435e7d7525d4bcd0ed5e34a469f3adf6} 
+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para crear una nueva tarea.
+
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de creación de tarea. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_add83d33c03db39565b7287054b0fa194}\index{TaskController@{TaskController}!destroy@{destroy}}
+\index{destroy@{destroy}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_add83d33c03db39565b7287054b0fa194} 
+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+Elimina una tarea del sistema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Task & {\em \$task} & Tarea a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado de tareas con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_a86c12b5cabb8f073dc931e7fb8d39bf3}\index{TaskController@{TaskController}!edit@{edit}}
+\index{edit@{edit}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_a86c12b5cabb8f073dc931e7fb8d39bf3} 
+edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para editar una tarea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Task & {\em \$task} & Tarea a editar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de edición. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_a149eb92716c1084a935e04a8d95f7347}\index{TaskController@{TaskController}!index@{index}}
+\index{index@{index}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra la lista de tareas.
+
+\begin{DoxyReturn}{Returns}
+View Vista con el listado de tareas. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_a62d3a6a58ade72b346b2723d1be3af7c}\index{TaskController@{TaskController}!show@{show}}
+\index{show@{show}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_a62d3a6a58ade72b346b2723d1be3af7c} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+Muestra los detalles de una tarea específica.
+
+Verifica si el empleado autenticado puede visualizar la tarea y lanza un error 403 si no tiene permisos.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Task & {\em \$task} & Tarea a mostrar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista con los detalles de la tarea.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Kernel\textbackslash{}\+Exception\textbackslash{}\+Http\+Exception Si el empleado no tiene permisos. \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_a9ef485163104597c12185b53cdacf638}\index{TaskController@{TaskController}!store@{store}}
+\index{store@{store}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_a9ef485163104597c12185b53cdacf638} 
+store (\begin{DoxyParamCaption}\item[{Request}]{\$request}{}\end{DoxyParamCaption})}
+
+Guarda una nueva tarea en el sistema.
+
+Valida los datos del formulario, obtiene el usuario por CIF y crea la tarea vinculada al usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request & {\em \$request} & Datos validados de la tarea.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado de tareas con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_task_controller_ad9fb03d9f39d6d8b5a1372db256072b5}\index{TaskController@{TaskController}!update@{update}}
+\index{update@{update}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_task_controller_ad9fb03d9f39d6d8b5a1372db256072b5} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_task_request}{Task\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+Actualiza los datos de una tarea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Task\+Request & {\em \$request} & Datos validados de la tarea. \\
+\hline
+Task & {\em \$task} & Tarea a actualizar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado de tareas con mensaje de éxito. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Task\+Controller.\+php\end{DoxyCompactItemize}

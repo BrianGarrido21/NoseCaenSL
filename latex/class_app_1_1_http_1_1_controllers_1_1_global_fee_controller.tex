@@ -1,0 +1,41 @@
+\doxysection{Global\+Fee\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_global_fee_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_global_fee_controller}\index{GlobalFeeController@{GlobalFeeController}}
+Inheritance diagram for Global\+Fee\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_global_fee_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_global_fee_controller_a082e2b37d7f317d25a9a596e37841ede}{\+\_\+\+\_\+invoke}} (Request \$request, \mbox{\hyperlink{class_app_1_1_services_1_1_currency_converter_service}{Currency\+Converter\+Service}} \$currency\+Converter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_global_fee_controller_a082e2b37d7f317d25a9a596e37841ede}\index{GlobalFeeController@{GlobalFeeController}!\_\_invoke@{\_\_invoke}}
+\index{\_\_invoke@{\_\_invoke}!GlobalFeeController@{GlobalFeeController}}
+\doxysubsubsection{\texorpdfstring{\_\_invoke()}{\_\_invoke()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_global_fee_controller_a082e2b37d7f317d25a9a596e37841ede} 
+\+\_\+\+\_\+invoke (\begin{DoxyParamCaption}\item[{Request}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_services_1_1_currency_converter_service}{Currency\+Converter\+Service}}}]{\$currency\+Converter}{}\end{DoxyParamCaption})}
+
+Crea fees globales para todos los usuarios.
+
+Valida los datos recibidos, recorre todos los usuarios del sistema y crea una fee para cada uno, aplicando conversión de divisa si es necesario. Además, envía una notificación por correo y programa un recordatorio mensual.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request & {\em \$request} & Datos validados del formulario de creación global. \\
+\hline
+Currency\+Converter\+Service & {\em \$currency\+Converter} & Servicio para la conversión de divisas.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado de fees con mensaje de éxito o error. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Global\+Fee\+Controller.\+php\end{DoxyCompactItemize}

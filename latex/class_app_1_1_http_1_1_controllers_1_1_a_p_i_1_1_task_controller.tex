@@ -1,0 +1,62 @@
+\doxysection{Task\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller}\index{TaskController@{TaskController}}
+Inheritance diagram for Task\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a9ef485163104597c12185b53cdacf638}{store}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a62d3a6a58ade72b346b2723d1be3af7c}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_ad9fb03d9f39d6d8b5a1372db256072b5}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_task_request}{Task\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_add83d33c03db39565b7287054b0fa194}{destroy}} (\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+OA\textbackslash{}\+Tag( name="{}\+Tasks"{}, description="{}\+API para la gestión de Tareas"{} ) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_add83d33c03db39565b7287054b0fa194}\index{TaskController@{TaskController}!destroy@{destroy}}
+\index{destroy@{destroy}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_add83d33c03db39565b7287054b0fa194} 
+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Delete( path="{}/api/v1/task/\{id\}"{}, tags=\{"{}\+Tasks"{}\}, summary="{}\+Eliminar una Tarea"{}, description="{}\+Elimina una tarea específica"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Tarea eliminada correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Task deleted successfully"{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a149eb92716c1084a935e04a8d95f7347}\index{TaskController@{TaskController}!index@{index}}
+\index{index@{index}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/task"{}, tags=\{"{}\+Tasks"{}\}, summary="{}\+Listar Tareas"{}, description="{}\+Devuelve una lista de todas las tareas registradas"{}, @\+OA\textbackslash{}\+Response( response=200, description="{}\+Listado de tareas obtenido correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(type="{}array"{}, @\+OA\textbackslash{}\+Items(ref="{}\#/components/schemas/\+Task"{})) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a62d3a6a58ade72b346b2723d1be3af7c}\index{TaskController@{TaskController}!show@{show}}
+\index{show@{show}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a62d3a6a58ade72b346b2723d1be3af7c} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Get( path="{}/api/v1/task/\{id\}"{}, tags=\{"{}\+Tasks"{}\}, summary="{}\+Obtener una Tarea"{}, description="{}\+Devuelve los datos de una tarea específica"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Tarea obtenida correctamente"{}, @\+OA\textbackslash{}\+Json\+Content(ref="{}\#/components/schemas/\+Task"{}) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a9ef485163104597c12185b53cdacf638}\index{TaskController@{TaskController}!store@{store}}
+\index{store@{store}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_a9ef485163104597c12185b53cdacf638} 
+store (\begin{DoxyParamCaption}\item[{Request}]{\$request}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Post( path="{}/api/v1/task"{}, tags=\{"{}\+Tasks"{}\}, summary="{}\+Crear una Tarea"{}, description="{}\+Crea una nueva tarea y la asocia a un usuario por CIF"{}, @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( required=\{"{}cif"{}, "{}name"{}, "{}phone"{}, "{}email"{}, "{}postal\+\_\+code"{}, "{}finish\+\_\+date"{}, "{}province\+\_\+id"{}, "{}status\+\_\+id"{}, "{}address"{}, "{}description"{}\}, @\+OA\textbackslash{}\+Property(property="{}cif"{}, type="{}string"{}, example="{}\+B12345678"{}), @\+OA\textbackslash{}\+Property(property="{}name"{}, type="{}string"{}, example="{}\+Instalación de software"{}), @\+OA\textbackslash{}\+Property(property="{}phone"{}, type="{}string"{}, example="{}123456789"{}), @\+OA\textbackslash{}\+Property(property="{}email"{}, type="{}string"{}, example="{}cliente@example.\+com"{}), @\+OA\textbackslash{}\+Property(property="{}postal\+\_\+code"{}, type="{}string"{}, example="{}28001"{}), @\+OA\textbackslash{}\+Property(property="{}finish\+\_\+date"{}, type="{}string"{}, format="{}date"{}, example="{}2024-\/06-\/20"{}), @\+OA\textbackslash{}\+Property(property="{}province\+\_\+id"{}, type="{}integer"{}, example=28), @\+OA\textbackslash{}\+Property(property="{}status\+\_\+id"{}, type="{}integer"{}, example=3), @\+OA\textbackslash{}\+Property(property="{}address"{}, type="{}string"{}, example="{}\+Calle Falsa 123"{}), @\+OA\textbackslash{}\+Property(property="{}description"{}, type="{}string"{}, example="{}\+Instalación completa del ERP."{}), @\+OA\textbackslash{}\+Property(property="{}pre\+\_\+notes"{}, type="{}string"{}, example="{}\+Verificar acceso remoto antes de iniciar."{}) ) ), @\+OA\textbackslash{}\+Response( response=201, description="{}\+Tarea creada correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Task created successfully"{}), @\+OA\textbackslash{}\+Property(property="{}task"{}, ref="{}\#/components/schemas/\+Task"{}) ) ) ) \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_ad9fb03d9f39d6d8b5a1372db256072b5}\index{TaskController@{TaskController}!update@{update}}
+\index{update@{update}!TaskController@{TaskController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_a_p_i_1_1_task_controller_ad9fb03d9f39d6d8b5a1372db256072b5} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_task_request}{Task\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+@\+OA\textbackslash{}\+Put( path="{}/api/v1/task/\{id\}"{}, tags=\{"{}\+Tasks"{}\}, summary="{}\+Actualizar una Tarea"{}, description="{}\+Actualiza los datos de una tarea existente"{}, @\+OA\textbackslash{}\+Parameter( name="{}id"{}, in="{}path"{}, required=true, @\+OA\textbackslash{}\+Schema(type="{}integer"{}) ), @\+OA\textbackslash{}\+Request\+Body( required=true, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}name"{}, type="{}string"{}, example="{}\+Revisión de software"{}), @\+OA\textbackslash{}\+Property(property="{}phone"{}, type="{}string"{}, example="{}987654321"{}), @\+OA\textbackslash{}\+Property(property="{}description"{}, type="{}string"{}, example="{}\+Actualización de módulos."{}), @\+OA\textbackslash{}\+Property(property="{}pre\+\_\+notes"{}, type="{}string"{}, example="{}\+Preparar entorno de pruebas."{}), @\+OA\textbackslash{}\+Property(property="{}finish\+\_\+date"{}, type="{}string"{}, format="{}date"{}, example="{}2024-\/06-\/30"{}) ) ), @\+OA\textbackslash{}\+Response( response=200, description="{}\+Tarea actualizada correctamente"{}, @\+OA\textbackslash{}\+Json\+Content( @\+OA\textbackslash{}\+Property(property="{}message"{}, type="{}string"{}, example="{}\+Task updated successfully"{}), @\+OA\textbackslash{}\+Property(property="{}task"{}, ref="{}\#/components/schemas/\+Task"{}) ) ) ) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/\+API/Task\+Controller.\+php\end{DoxyCompactItemize}

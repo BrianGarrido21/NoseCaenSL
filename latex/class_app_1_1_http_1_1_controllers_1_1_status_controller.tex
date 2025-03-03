@@ -1,0 +1,148 @@
+\doxysection{Status\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_status_controller}\index{StatusController@{StatusController}}
+Inheritance diagram for Status\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_status_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_af23f8458071738cc1bd39a90d1308d11}{store}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_status_request}{Status\+Request}} \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_a74d155d40ae518a2e0b26182e1d34a1d}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}} \$status)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_a0dfbf9885037793a36b2b859f665e37f}{edit}} (\mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}} \$status)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_ac4876a82072cc245553c14caa062b543}{update}} (\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_status_request}{Status\+Request}} \$request, \mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}} \$status)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_status_controller_a8005a38946915fc7e1e3870a5ab73faf}{destroy}} (\mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}} \$status)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_a095c5d389db211932136b53f25f39685}\index{StatusController@{StatusController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_a095c5d389db211932136b53f25f39685} 
+\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Constructor que aplica middleware de permisos según la acción. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}\index{StatusController@{StatusController}!create@{create}}
+\index{create@{create}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_a435e7d7525d4bcd0ed5e34a469f3adf6} 
+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para crear un nuevo estado.
+
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de creación de estado. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_a8005a38946915fc7e1e3870a5ab73faf}\index{StatusController@{StatusController}!destroy@{destroy}}
+\index{destroy@{destroy}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_a8005a38946915fc7e1e3870a5ab73faf} 
+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}}}]{\$status}{}\end{DoxyParamCaption})}
+
+Elimina un estado del sistema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Status & {\em \$status} & Estado a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_a0dfbf9885037793a36b2b859f665e37f}\index{StatusController@{StatusController}!edit@{edit}}
+\index{edit@{edit}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_a0dfbf9885037793a36b2b859f665e37f} 
+edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}}}]{\$status}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para editar un estado.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Status & {\em \$status} & Estado a editar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de edición del estado. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_a149eb92716c1084a935e04a8d95f7347}\index{StatusController@{StatusController}!index@{index}}
+\index{index@{index}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_a149eb92716c1084a935e04a8d95f7347} 
+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el listado de estados.
+
+\begin{DoxyReturn}{Returns}
+View Vista con el listado de estados. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_a74d155d40ae518a2e0b26182e1d34a1d}\index{StatusController@{StatusController}!show@{show}}
+\index{show@{show}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_a74d155d40ae518a2e0b26182e1d34a1d} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}}}]{\$status}{}\end{DoxyParamCaption})}
+
+Muestra los detalles de un estado específico.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Status & {\em \$status} & Estado a mostrar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+View Vista con los detalles del estado. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_af23f8458071738cc1bd39a90d1308d11}\index{StatusController@{StatusController}!store@{store}}
+\index{store@{store}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_af23f8458071738cc1bd39a90d1308d11} 
+store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_status_request}{Status\+Request}}}]{\$request}{}\end{DoxyParamCaption})}
+
+Guarda un nuevo estado en el sistema.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Status\+Request & {\em \$request} & Datos validados del estado.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_status_controller_ac4876a82072cc245553c14caa062b543}\index{StatusController@{StatusController}!update@{update}}
+\index{update@{update}!StatusController@{StatusController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_status_controller_ac4876a82072cc245553c14caa062b543} 
+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_http_1_1_requests_1_1_status_request}{Status\+Request}}}]{\$request}{, }\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_status}{Status}}}]{\$status}{}\end{DoxyParamCaption})}
+
+Actualiza los datos de un estado.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Status\+Request & {\em \$request} & Datos validados del estado. \\
+\hline
+Status & {\em \$status} & Estado a actualizar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al listado con mensaje de éxito. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Status\+Controller.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\doxysection{Employee\+Auth\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller}\index{EmployeeAuthController@{EmployeeAuthController}}
+Inheritance diagram for Employee\+Auth\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_a44362675365895f1c23b2d548f314e68}{show\+Login\+Form}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_ab27bea29a2b42a9c42a388032eee21ac}{login}} (Request \$request)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_a5b2715b64f1825c3c1e3a92ee2b695fc}{logout}} (Request \$request)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_ab27bea29a2b42a9c42a388032eee21ac}\index{EmployeeAuthController@{EmployeeAuthController}!login@{login}}
+\index{login@{login}!EmployeeAuthController@{EmployeeAuthController}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_ab27bea29a2b42a9c42a388032eee21ac} 
+login (\begin{DoxyParamCaption}\item[{Request}]{\$request}{}\end{DoxyParamCaption})}
+
+Procesa el inicio de sesión de un empleado.
+
+Valida las credenciales ingresadas y, si son correctas, inicia sesión y redirige al dashboard del empleado. Si las credenciales son inválidas, retorna al formulario de login con errores.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request & {\em \$request} & Datos enviados desde el formulario de login.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al dashboard o de vuelta al login con errores. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_a5b2715b64f1825c3c1e3a92ee2b695fc}\index{EmployeeAuthController@{EmployeeAuthController}!logout@{logout}}
+\index{logout@{logout}!EmployeeAuthController@{EmployeeAuthController}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_a5b2715b64f1825c3c1e3a92ee2b695fc} 
+logout (\begin{DoxyParamCaption}\item[{Request}]{\$request}{}\end{DoxyParamCaption})}
+
+Cierra la sesión del empleado autenticado.
+
+Invalida la sesión actual y regenera el token de sesión para evitar ataques CSRF, redirigiendo nuevamente al login.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request & {\em \$request} & Solicitud actual para invalidar la sesión.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect\+Response Redirección al formulario de login. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_a44362675365895f1c23b2d548f314e68}\index{EmployeeAuthController@{EmployeeAuthController}!showLoginForm@{showLoginForm}}
+\index{showLoginForm@{showLoginForm}!EmployeeAuthController@{EmployeeAuthController}}
+\doxysubsubsection{\texorpdfstring{showLoginForm()}{showLoginForm()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_employee_auth_controller_a44362675365895f1c23b2d548f314e68} 
+show\+Login\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Muestra el formulario de login para empleados.
+
+\begin{DoxyReturn}{Returns}
+View Vista del formulario de inicio de sesión para empleados. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Employee\+Auth\+Controller.\+php\end{DoxyCompactItemize}

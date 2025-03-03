@@ -1,0 +1,1341 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API BungleBuild",
+        "description": "Documentación de la API de gestión de empleados, tareas y fees.",
+        "contact": {
+            "email": "soporte@bunglebuild.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost/api/v1",
+            "description": "Servidor local de desarrollo"
+        }
+    ],
+    "paths": {
+        "/api/v1/employee": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Listar empleados",
+                "description": "Obtiene el listado completo de empleados",
+                "operationId": "23c6943b22b9e112330457712b157bb2",
+                "responses": {
+                    "200": {
+                        "description": "Listado de empleados obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Employee"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Crear un empleado",
+                "description": "Crea un nuevo empleado con sus datos y rol",
+                "operationId": "b73cd8d9dd97dbab75bd4bd72cbb0bce",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "dni",
+                                    "name",
+                                    "email",
+                                    "phone",
+                                    "address",
+                                    "password",
+                                    "role_id"
+                                ],
+                                "properties": {
+                                    "dni": {
+                                        "type": "string",
+                                        "example": "12345678A"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Juan Pérez"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "juan@example.com"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "123456789"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Calle Falsa 123"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "secret123"
+                                    },
+                                    "role_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Empleado creado exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Employee created successfully"
+                                        },
+                                        "employee": {
+                                            "$ref": "#/components/schemas/Employee"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/employee/{id}": {
+            "get": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Obtener un empleado",
+                "description": "Devuelve los datos de un empleado específico",
+                "operationId": "26bde5cca257c534b3baaa25d472e151",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Empleado obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Employee"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Actualizar un empleado",
+                "description": "Actualiza los datos de un empleado existente",
+                "operationId": "9470d38cdfe50daa31cbdab8081ae582",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "dni",
+                                    "name",
+                                    "email",
+                                    "phone",
+                                    "address"
+                                ],
+                                "properties": {
+                                    "dni": {
+                                        "type": "string",
+                                        "example": "12345678A"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Juan Pérez"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "juan@example.com"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "123456789"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Calle Falsa 123"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "secret123"
+                                    },
+                                    "role_id": {
+                                        "type": "integer",
+                                        "example": 2
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Empleado actualizado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Employee updated successfully"
+                                        },
+                                        "employee": {
+                                            "$ref": "#/components/schemas/Employee"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Eliminar un empleado",
+                "description": "Elimina un empleado existente",
+                "operationId": "9015711285fbbbd9d2d7631fcba863af",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Empleado eliminado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Employee deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/fee": {
+            "get": {
+                "tags": [
+                    "Fees"
+                ],
+                "summary": "Listar Fees",
+                "description": "Devuelve una lista de todos los Fees",
+                "operationId": "ad7a423e5feaff448de2924897bbf1ea",
+                "responses": {
+                    "200": {
+                        "description": "Listado de Fees obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Fee"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Fees"
+                ],
+                "summary": "Crear un Fee",
+                "description": "Crea un nuevo Fee y envía notificación por email",
+                "operationId": "d9d61c86bdd13cac8f632766c2e8da92",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "concept",
+                                    "import",
+                                    "due_date",
+                                    "user_id"
+                                ],
+                                "properties": {
+                                    "concept": {
+                                        "type": "string",
+                                        "example": "Servicio mensual"
+                                    },
+                                    "import": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": 100.5
+                                    },
+                                    "due_date": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2024-06-15"
+                                    },
+                                    "is_paid": {
+                                        "type": "boolean",
+                                        "example": false
+                                    },
+                                    "user_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "notes": {
+                                        "type": "string",
+                                        "example": "Pago pendiente"
+                                    },
+                                    "currency_iso": {
+                                        "type": "string",
+                                        "example": "usd"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Fee creado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Fee created successfully."
+                                        },
+                                        "fee": {
+                                            "$ref": "#/components/schemas/Fee"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error en la conversión de divisa",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "type": "string",
+                                            "example": "Currency conversion failed."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/fee/{id}": {
+            "get": {
+                "tags": [
+                    "Fees"
+                ],
+                "summary": "Obtener un Fee",
+                "description": "Devuelve los datos de un Fee específico",
+                "operationId": "d712e48ee1bf02ffc6e411f6c633717d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fee obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Fee"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Fees"
+                ],
+                "summary": "Actualizar un Fee",
+                "description": "Actualiza los datos de un Fee existente",
+                "operationId": "45e563c22ef1697be94e311220aeeb86",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "concept": {
+                                        "type": "string",
+                                        "example": "Servicio actualizado"
+                                    },
+                                    "import": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": 150.75
+                                    },
+                                    "due_date": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2024-07-15"
+                                    },
+                                    "is_paid": {
+                                        "type": "boolean",
+                                        "example": true
+                                    },
+                                    "notes": {
+                                        "type": "string",
+                                        "example": "Pago recibido"
+                                    },
+                                    "currency_iso": {
+                                        "type": "string",
+                                        "example": "usd"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Fee actualizado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Fee updated successfully."
+                                        },
+                                        "fee": {
+                                            "$ref": "#/components/schemas/Fee"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Fees"
+                ],
+                "summary": "Eliminar un Fee",
+                "description": "Elimina un Fee existente",
+                "operationId": "6d43e3b7665a6ea9c322abdae03273a2",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fee eliminado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Fee deleted successfully."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/task": {
+            "get": {
+                "tags": [
+                    "Tasks"
+                ],
+                "summary": "Listar Tareas",
+                "description": "Devuelve una lista de todas las tareas registradas",
+                "operationId": "5e2f3cb37ffe474409e8cb0e42a41c01",
+                "responses": {
+                    "200": {
+                        "description": "Listado de tareas obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Task"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Tasks"
+                ],
+                "summary": "Crear una Tarea",
+                "description": "Crea una nueva tarea y la asocia a un usuario por CIF",
+                "operationId": "ea29527d22a1c98476bcd24a196a4163",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "cif",
+                                    "name",
+                                    "phone",
+                                    "email",
+                                    "postal_code",
+                                    "finish_date",
+                                    "province_id",
+                                    "status_id",
+                                    "address",
+                                    "description"
+                                ],
+                                "properties": {
+                                    "cif": {
+                                        "type": "string",
+                                        "example": "B12345678"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Instalación de software"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "123456789"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "cliente@example.com"
+                                    },
+                                    "postal_code": {
+                                        "type": "string",
+                                        "example": "28001"
+                                    },
+                                    "finish_date": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2024-06-20"
+                                    },
+                                    "province_id": {
+                                        "type": "integer",
+                                        "example": 28
+                                    },
+                                    "status_id": {
+                                        "type": "integer",
+                                        "example": 3
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Calle Falsa 123"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "Instalación completa del ERP."
+                                    },
+                                    "pre_notes": {
+                                        "type": "string",
+                                        "example": "Verificar acceso remoto antes de iniciar."
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Tarea creada correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Task created successfully"
+                                        },
+                                        "task": {
+                                            "$ref": "#/components/schemas/Task"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/task/{id}": {
+            "get": {
+                "tags": [
+                    "Tasks"
+                ],
+                "summary": "Obtener una Tarea",
+                "description": "Devuelve los datos de una tarea específica",
+                "operationId": "b34ad2d0161c908a31e1b50ce145a566",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Tarea obtenida correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Task"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Tasks"
+                ],
+                "summary": "Actualizar una Tarea",
+                "description": "Actualiza los datos de una tarea existente",
+                "operationId": "ee7a9f6754eb643dabb34f6ceecd2258",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Revisión de software"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "987654321"
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "example": "Actualización de módulos."
+                                    },
+                                    "pre_notes": {
+                                        "type": "string",
+                                        "example": "Preparar entorno de pruebas."
+                                    },
+                                    "finish_date": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2024-06-30"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Tarea actualizada correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Task updated successfully"
+                                        },
+                                        "task": {
+                                            "$ref": "#/components/schemas/Task"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Tasks"
+                ],
+                "summary": "Eliminar una Tarea",
+                "description": "Elimina una tarea específica",
+                "operationId": "ae8a8490d611d835cda1c2e1382c5398",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Tarea eliminada correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Task deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/user": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Listar Usuarios",
+                "description": "Obtiene una lista de todos los usuarios registrados",
+                "operationId": "20eb061aa06557820b4055972c4b42a2",
+                "responses": {
+                    "200": {
+                        "description": "Listado de usuarios obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/User"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Crear un Usuario",
+                "description": "Crea un nuevo usuario con su información y país asociado",
+                "operationId": "57b583b629802a323e4b919ccb65ad07",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "cif",
+                                    "name",
+                                    "email",
+                                    "phone",
+                                    "address",
+                                    "country_id"
+                                ],
+                                "properties": {
+                                    "cif": {
+                                        "type": "string",
+                                        "example": "B12345678"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Carlos Gómez"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "carlos@example.com"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "987654321"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Avenida Principal 456"
+                                    },
+                                    "country_id": {
+                                        "type": "integer",
+                                        "example": 5
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Usuario creado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User created successfully"
+                                        },
+                                        "user": {
+                                            "$ref": "#/components/schemas/User"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/user/{id}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Obtener un Usuario",
+                "description": "Devuelve los datos de un usuario específico",
+                "operationId": "039bfa637465446ab62a3e09ddc25f2d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Usuario obtenido correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Actualizar un Usuario",
+                "description": "Actualiza los datos de un usuario existente",
+                "operationId": "957a3355b91c4dbfcaa73b5c03f85b06",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "cif": {
+                                        "type": "string",
+                                        "example": "B12345678"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Carlos Gómez"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "carlos@example.com"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "987654321"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Avenida Principal 456"
+                                    },
+                                    "country_id": {
+                                        "type": "integer",
+                                        "example": 5
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Usuario actualizado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User updated successfully"
+                                        },
+                                        "user": {
+                                            "$ref": "#/components/schemas/User"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Eliminar un Usuario",
+                "description": "Elimina un usuario específico",
+                "operationId": "c6f976257d20115c163ea28ac4dffd29",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Usuario eliminado correctamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Employee": {
+                "title": "Employee",
+                "description": "Modelo de empleado",
+                "required": [
+                    "id",
+                    "dni",
+                    "name",
+                    "email",
+                    "phone",
+                    "address"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "dni": {
+                        "type": "string",
+                        "example": "12345678A"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Juan Pérez"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "juan@example.com"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "example": "123456789"
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "Calle Falsa 123"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-01-01T00:00:00Z"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-01-02T00:00:00Z"
+                    }
+                },
+                "type": "object"
+            },
+            "Fee": {
+                "title": "Fee",
+                "description": "Modelo de Fee",
+                "required": [
+                    "id",
+                    "concept",
+                    "import",
+                    "due_date",
+                    "user_id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "concept": {
+                        "type": "string",
+                        "example": "Servicio mensual"
+                    },
+                    "import": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 100.5
+                    },
+                    "due_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2024-06-15"
+                    },
+                    "is_paid": {
+                        "type": "boolean",
+                        "example": false
+                    },
+                    "user_id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "notes": {
+                        "type": "string",
+                        "example": "Pago pendiente"
+                    },
+                    "currency_iso": {
+                        "type": "string",
+                        "example": "USD"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-01-01T12:00:00Z"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-01-02T12:00:00Z"
+                    }
+                },
+                "type": "object"
+            },
+            "Task": {
+                "title": "Task",
+                "description": "Modelo de Tarea",
+                "required": [
+                    "id",
+                    "cif",
+                    "name",
+                    "phone",
+                    "email",
+                    "postal_code",
+                    "finish_date",
+                    "province_id",
+                    "status_id",
+                    "address",
+                    "description",
+                    "user_id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "cif": {
+                        "type": "string",
+                        "example": "B12345678"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Instalación de software"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "example": "123456789"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "cliente@example.com"
+                    },
+                    "postal_code": {
+                        "type": "string",
+                        "example": "28001"
+                    },
+                    "finish_date": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2024-06-20"
+                    },
+                    "province_id": {
+                        "type": "integer",
+                        "example": 28
+                    },
+                    "status_id": {
+                        "type": "integer",
+                        "example": 3
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "Calle Falsa 123"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "Instalación completa del ERP."
+                    },
+                    "pre_notes": {
+                        "type": "string",
+                        "example": "Revisar requisitos antes de comenzar."
+                    },
+                    "post_notes": {
+                        "type": "string",
+                        "example": "Todo funcionando correctamente."
+                    },
+                    "summary_uri": {
+                        "type": "string",
+                        "example": "http://example.com/summary.pdf"
+                    },
+                    "creation_date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-01T09:00:00Z"
+                    },
+                    "user_id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "employee_id": {
+                        "type": "integer",
+                        "example": 5,
+                        "nullable": true
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-01T09:00:00Z"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-01T10:00:00Z"
+                    }
+                },
+                "type": "object"
+            },
+            "User": {
+                "title": "User",
+                "description": "Modelo de Usuario",
+                "required": [
+                    "id",
+                    "cif",
+                    "name",
+                    "email",
+                    "phone",
+                    "address",
+                    "country_id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "cif": {
+                        "type": "string",
+                        "example": "B12345678"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Carlos Gómez"
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "carlos@example.com"
+                    },
+                    "phone": {
+                        "type": "string",
+                        "example": "987654321"
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "Avenida Principal 456"
+                    },
+                    "country_id": {
+                        "type": "integer",
+                        "example": 5
+                    },
+                    "currency_iso": {
+                        "type": "string",
+                        "example": "usd"
+                    },
+                    "email_verified_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-06-01T12:00:00Z"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-01T09:00:00Z"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-02T10:00:00Z"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Employees",
+            "description": "API para la gestión de empleados"
+        },
+        {
+            "name": "Fees",
+            "description": "API para la gestión de Fees"
+        },
+        {
+            "name": "Tasks",
+            "description": "API para la gestión de Tareas"
+        },
+        {
+            "name": "Users",
+            "description": "API para la gestión de Usuarios"
+        }
+    ]
+}

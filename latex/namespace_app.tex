@@ -1,0 +1,126 @@
+\doxysection{App Namespace Reference}
+\hypertarget{namespace_app}{}\label{namespace_app}\index{App@{App}}
+
+
+\doxysubsection{Detailed Description}
+Class Complete\+Controller
+
+Controlador encargado de completar una tarea y adjuntar archivos relacionados.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Employee\+Auth\+Controller
+
+Controlador encargado de gestionar la autenticación de empleados.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Employee\+Controller
+
+Controlador encargado de la gestión CRUD de empleados, incluyendo asignación de roles y protección mediante permisos.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Fee\+Controller
+
+Controlador encargado de la gestión completa de fees (cuotas), incluyendo su creación con conversión de divisas, notificación por correo y recordatorios automáticos.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Global\+Fee\+Controller
+
+Controlador encargado de crear fees globales para todos los usuarios del sistema. Realiza la conversión de divisas individualmente para cada usuario, envía notificaciones por correo y programa recordatorios mensuales.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class PDFController
+
+Controlador encargado de gestionar la generación y reenvío de PDFs asociados a fees.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Profile\+Controller
+
+Controlador encargado de gestionar la edición y actualización del perfil del empleado autenticado.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Role\+Controller
+
+Controlador encargado de gestionar los roles del sistema, incluyendo su creación, edición, eliminación y asignación de permisos.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Status\+Controller
+
+Controlador encargado de la gestión de estados (statuses) dentro del sistema, permitiendo crear, visualizar, actualizar y eliminar estados, con control de permisos.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Task\+Controller
+
+Controlador encargado de la gestión completa de tareas (tasks), incluyendo su creación, visualización, actualización y eliminación, con validación de permisos y relación con usuarios.
+
+\textbackslash{}\+Http\textbackslash{}\+Controllers
+
+Class Tasks\+Table
+
+Componente Livewire que gestiona la tabla interactiva de tareas utilizando Laravel Livewire Tables. Permite paginación, búsqueda, ordenación y visualización personalizada de columnas, además de aplicar restricciones según el rol del empleado autenticado.
+
+\textbackslash{}\+Http\textbackslash{}\+Livewire
+
+Class Check\+Permission
+
+Middleware encargado de verificar si el empleado autenticado tiene un permiso específico antes de permitirle continuar con la solicitud.
+
+Si el empleado no está autenticado o no cuenta con el permiso requerido, devuelve un error 403.
+
+\textbackslash{}\+Http\textbackslash{}\+Middleware
+
+Class Employee\+Authenticate
+
+Middleware encargado de verificar si un empleado está autenticado antes de permitir el acceso a rutas protegidas.
+
+Si el empleado no está autenticado, redirige al formulario de login.
+
+\textbackslash{}\+Http\textbackslash{}\+Middleware
+
+Class Send\+Fee\+Reminder
+
+Job encargado de enviar un recordatorio por correo electrónico relacionado con una fee (cuota) específica.
+
+Se ejecuta de manera asíncrona en la cola de trabajos y utiliza el sistema de notificaciones por correo para avisar al usuario asociado a la fee.
+
+\textbackslash{}\+Jobs
+
+Class Fee\+Notification
+
+Mailable encargado de enviar una notificación por correo electrónico al usuario relacionado con una fee (cuota).
+
+Adjunta un archivo PDF generado dinámicamente con los detalles de la fee.
+
+\textbackslash{}\+Mail
+
+Class Status
+
+Modelo que representa un estado dentro del sistema. Un estado puede estar asociado a múltiples tareas.
+
+\textbackslash{}\+Models
+
+Class View\+Service\+Provider
+
+Service Provider encargado de inyectar datos globales a vistas específicas mediante el uso de View Composers. Automatiza la carga de información como empleados, roles, permisos, provincias, estados, usuarios y países para los formularios de creación y edición del sistema.
+
+\textbackslash{}\+Providers
+
+Class Valid\+DNI
+
+Regla de validación personalizada para verificar si un DNI (Documento Nacional de Identidad) es válido según el formato español, que consiste en 8 dígitos seguidos de una letra calculada.
+
+\textbackslash{}\+Rules
+
+Class Currency\+Converter\+Service
+
+Servicio encargado de realizar conversiones de divisas a EUR (Euro) utilizando una API externa. Además, almacena las tasas de cambio en caché durante 1 hora para optimizar el rendimiento.
+
+\textbackslash{}\+Services 

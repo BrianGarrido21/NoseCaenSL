@@ -1,0 +1,69 @@
+\doxysection{PDFController Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller}\index{PDFController@{PDFController}}
+Inheritance diagram for PDFController\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller_a16eca0bb6e006b39247b1102abc4d3fe}{download\+Fee\+PDF}} (\$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller_a2445154b611265c2784b9413ff661df2}{resend\+Fee\+PDF}} (\$id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller_a16eca0bb6e006b39247b1102abc4d3fe}\index{PDFController@{PDFController}!downloadFeePDF@{downloadFeePDF}}
+\index{downloadFeePDF@{downloadFeePDF}!PDFController@{PDFController}}
+\doxysubsubsection{\texorpdfstring{downloadFeePDF()}{downloadFeePDF()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller_a16eca0bb6e006b39247b1102abc4d3fe} 
+download\+Fee\+PDF (\begin{DoxyParamCaption}\item[{}]{\$id}{}\end{DoxyParamCaption})}
+
+Descarga el PDF de una fee específica.
+
+Genera un archivo PDF con los datos de la fee y su usuario asociado, utilizando la vista {\ttfamily pdf.\+fee}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & ID de la fee a generar el PDF.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Response Descarga del archivo PDF de la fee.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Illuminate\textbackslash{}\+Database\textbackslash{}\+Eloquent\textbackslash{}\+Model\+Not\+Found\+Exception Si la fee no existe. \Hypertarget{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller_a2445154b611265c2784b9413ff661df2}\index{PDFController@{PDFController}!resendFeePDF@{resendFeePDF}}
+\index{resendFeePDF@{resendFeePDF}!PDFController@{PDFController}}
+\doxysubsubsection{\texorpdfstring{resendFeePDF()}{resendFeePDF()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_p_d_f_controller_a2445154b611265c2784b9413ff661df2} 
+resend\+Fee\+PDF (\begin{DoxyParamCaption}\item[{}]{\$id}{}\end{DoxyParamCaption})}
+
+Reenvía el PDF de una fee por correo electrónico al usuario asociado.
+
+Envía la notificación por email con los datos de la fee al correo del usuario.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & ID de la fee a reenviar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Redirección con mensaje de éxito.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Illuminate\textbackslash{}\+Database\textbackslash{}\+Eloquent\textbackslash{}\+Model\+Not\+Found\+Exception Si la fee no existe. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/PDFController.\+php\end{DoxyCompactItemize}

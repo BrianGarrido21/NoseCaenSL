@@ -1,0 +1,58 @@
+\doxysection{Fee\+Notification Class Reference}
+\hypertarget{class_app_1_1_mail_1_1_fee_notification}{}\label{class_app_1_1_mail_1_1_fee_notification}\index{FeeNotification@{FeeNotification}}
+Inheritance diagram for Fee\+Notification\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_mail_1_1_fee_notification}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_mail_1_1_fee_notification_a2f947db6a75987864f4e70a106a61a3b}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}} \$fee)
+\item 
+\mbox{\hyperlink{class_app_1_1_mail_1_1_fee_notification_a3928875ef0ceb18a51c1061be3eb3a00}{build}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_app_1_1_mail_1_1_fee_notification_aaae531680cac4b9220fb1a0fe8b4c698}\label{class_app_1_1_mail_1_1_fee_notification_aaae531680cac4b9220fb1a0fe8b4c698} 
+{\bfseries \$fee}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_1_1_mail_1_1_fee_notification_a2f947db6a75987864f4e70a106a61a3b}\index{FeeNotification@{FeeNotification}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FeeNotification@{FeeNotification}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_app_1_1_mail_1_1_fee_notification_a2f947db6a75987864f4e70a106a61a3b} 
+\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_fee}{Fee}}}]{\$fee}{}\end{DoxyParamCaption})}
+
+Crea una nueva instancia del mailable.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Fee & {\em \$fee} & La fee sobre la cual se genera la notificación. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_mail_1_1_fee_notification_a3928875ef0ceb18a51c1061be3eb3a00}\index{FeeNotification@{FeeNotification}!build@{build}}
+\index{build@{build}!FeeNotification@{FeeNotification}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily \label{class_app_1_1_mail_1_1_fee_notification_a3928875ef0ceb18a51c1061be3eb3a00} 
+build (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Construye el correo electrónico.
+
+Genera un PDF con los datos de la fee, lo adjunta al correo y utiliza la vista \textquotesingle{}mail.\+fee\+\_\+notification\textquotesingle{} como cuerpo del mensaje.
+
+\begin{DoxyReturn}{Returns}
+\$this Instancia del correo con los datos configurados. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mail/Fee\+Notification.\+php\end{DoxyCompactItemize}

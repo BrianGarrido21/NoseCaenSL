@@ -1,0 +1,64 @@
+\doxysection{Complete\+Controller Class Reference}
+\hypertarget{class_app_1_1_http_1_1_controllers_1_1_complete_controller}{}\label{class_app_1_1_http_1_1_controllers_1_1_complete_controller}\index{CompleteController@{CompleteController}}
+Inheritance diagram for Complete\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_app_1_1_http_1_1_controllers_1_1_complete_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_complete_controller_a62d3a6a58ade72b346b2723d1be3af7c}{show}} (\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}} \$task)
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_controllers_1_1_complete_controller_a36a8cb16d4820a6aa1550771e221bde8}{store}} (Request \$request, \$id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_complete_controller_a62d3a6a58ade72b346b2723d1be3af7c}\index{CompleteController@{CompleteController}!show@{show}}
+\index{show@{show}!CompleteController@{CompleteController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_complete_controller_a62d3a6a58ade72b346b2723d1be3af7c} 
+show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app_1_1_models_1_1_task}{Task}}}]{\$task}{}\end{DoxyParamCaption})}
+
+Muestra el formulario para completar una tarea.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Task & {\em \$task} & Tarea que se va a completar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+View\textbackslash{}\+View Vista del formulario de completado de tarea. 
+\end{DoxyReturn}
+\Hypertarget{class_app_1_1_http_1_1_controllers_1_1_complete_controller_a36a8cb16d4820a6aa1550771e221bde8}\index{CompleteController@{CompleteController}!store@{store}}
+\index{store@{store}!CompleteController@{CompleteController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_controllers_1_1_complete_controller_a36a8cb16d4820a6aa1550771e221bde8} 
+store (\begin{DoxyParamCaption}\item[{Request}]{\$request}{, }\item[{}]{\$id}{}\end{DoxyParamCaption})}
+
+Guarda la información de la tarea completada.
+
+Valida la información del formulario, actualiza las notas finales de la tarea, cambia su estado a "{}\+Completed"{} y guarda los archivos adjuntos si los hubiera.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Request & {\em \$request} & Datos enviados desde el formulario. \\
+\hline
+int & {\em \$id} & ID de la tarea a completar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Redirect\+Response Redirección al listado de tareas con mensaje de éxito.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Illuminate\textbackslash{}\+Database\textbackslash{}\+Eloquent\textbackslash{}\+Model\+Not\+Found\+Exception Si la tarea no existe. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Controllers/Complete\+Controller.\+php\end{DoxyCompactItemize}

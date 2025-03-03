@@ -1,0 +1,60 @@
+\doxysection{View\+Service\+Provider Class Reference}
+\hypertarget{class_app_1_1_providers_1_1_view_service_provider}{}\label{class_app_1_1_providers_1_1_view_service_provider}\index{ViewServiceProvider@{ViewServiceProvider}}
+Inheritance diagram for View\+Service\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_providers_1_1_view_service_provider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_providers_1_1_view_service_provider_a8814ea4b5beba763c570b4818980814e}{boot}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_providers_1_1_view_service_provider_a8814ea4b5beba763c570b4818980814e}\index{ViewServiceProvider@{ViewServiceProvider}!boot@{boot}}
+\index{boot@{boot}!ViewServiceProvider@{ViewServiceProvider}}
+\doxysubsubsection{\texorpdfstring{boot()}{boot()}}
+{\footnotesize\ttfamily \label{class_app_1_1_providers_1_1_view_service_provider_a8814ea4b5beba763c570b4818980814e} 
+boot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Registra los compositores de vistas.
+
+Asigna automáticamente los siguientes datos a sus vistas correspondientes\+:
+
+
+\begin{DoxyItemize}
+\item Tareas ({\ttfamily employee.\+task.\+create}, {\ttfamily employee.\+task.\+edit})\+:
+\begin{DoxyItemize}
+\item Empleados con rol "{}operator"{}.
+\item Provincias disponibles.
+\item Estados disponibles.
+\end{DoxyItemize}
+\item Cuotas ({\ttfamily employee.\+fee.\+create}, {\ttfamily employee.\+fee.\+edit})\+:
+\begin{DoxyItemize}
+\item Usuarios disponibles.
+\end{DoxyItemize}
+\item Empleados ({\ttfamily employee.\+create}, {\ttfamily employee.\+edit})\+:
+\begin{DoxyItemize}
+\item Roles disponibles.
+\end{DoxyItemize}
+\item Roles ({\ttfamily employee.\+role.\+create}, {\ttfamily employee.\+role.\+edit}, {\ttfamily employee.\+role.\+show})\+:
+\begin{DoxyItemize}
+\item Permisos disponibles.
+\end{DoxyItemize}
+\item Usuarios ({\ttfamily employee.\+user.\+create}, {\ttfamily employee.\+user.\+edit})\+:
+\begin{DoxyItemize}
+\item Países disponibles.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Providers/View\+Service\+Provider.\+php\end{DoxyCompactItemize}

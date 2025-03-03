@@ -1,0 +1,40 @@
+\doxysection{Check\+Permission Class Reference}
+\hypertarget{class_app_1_1_http_1_1_middleware_1_1_check_permission}{}\label{class_app_1_1_http_1_1_middleware_1_1_check_permission}\index{CheckPermission@{CheckPermission}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_http_1_1_middleware_1_1_check_permission_a817a8a9c67d5a8b9a2f3162fc2921679}{handle}} (\$request, Closure \$next, \$permission)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_1_1_http_1_1_middleware_1_1_check_permission_a817a8a9c67d5a8b9a2f3162fc2921679}\index{CheckPermission@{CheckPermission}!handle@{handle}}
+\index{handle@{handle}!CheckPermission@{CheckPermission}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily \label{class_app_1_1_http_1_1_middleware_1_1_check_permission_a817a8a9c67d5a8b9a2f3162fc2921679} 
+handle (\begin{DoxyParamCaption}\item[{}]{\$request}{, }\item[{Closure}]{\$next}{, }\item[{}]{\$permission}{}\end{DoxyParamCaption})}
+
+Maneja la solicitud entrante y verifica el permiso del empleado.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\textbackslash{}\+Illuminate\textbackslash{}\+Http\textbackslash{}\+Request & {\em \$request} & La solicitud entrante. \\
+\hline
+\textbackslash{}\+Closure & {\em \$next} & Función de continuación para la solicitud. \\
+\hline
+string & {\em \$permission} & Nombre del permiso requerido.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed Continuación de la solicitud si el permiso es válido.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+Symfony\textbackslash{}\+Component\textbackslash{}\+Http\+Kernel\textbackslash{}\+Exception\textbackslash{}\+Http\+Exception Si no tiene permisos. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Http/\+Middleware/Check\+Permission.\+php\end{DoxyCompactItemize}
