@@ -4,9 +4,10 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/BrianGarrido21/NoseCaenSL)
 ![GitHub top language](https://img.shields.io/github/languages/top/BrianGarrido21/NoseCaenSL?color=4FC08D)
 
-Aplicación web para la gestión interna de la empresa "NoseCaenSL". *(Reemplaza esto con una descripción breve: Ej: "Sistema de gestión de inventario, proyectos y facturación...")*
+Sitio web corporativo desarrollado para la empresa NoSeCaen.SL de gestion de tareas, empleados, permisos y pagos
 
-![Captura de pantalla de NoseCaenSL](https://via.placeholder.com/800x400.png?text=Captura+de+pantalla+de+NoseCaenSL)
+<img width="1902" height="986" alt="Screenshot 2025-10-24 at 08 58 53" src="https://github.com/user-attachments/assets/62b35838-0bf5-443d-91c3-6c8abf707a7e" />
+
 
 ## ✨ Características Principales
 
@@ -36,6 +37,7 @@ Este proyecto está construido como una "Single Page Application (SPA)" monolít
 
 * **[Vue.js (v3)](https://vuejs.org/)**: Framework progresivo de JavaScript para construir la interfaz de usuario.
 * **[Inertia.js](https://inertiajs.com/)**: Actúa como "pegamento" entre el backend de Laravel y el frontend de Vue.js, permitiendo crear una SPA sin construir una API tradicional.
+* **[Livewire](https://laravel-livewire.com/)**: Framework full-stack para construir interfaces dinámicas directamente en PHP/Blade.
 * **[Tailwind CSS](https://tailwindcss.com/)**: Framework de CSS utility-first para un diseño rápido y moderno.
 * **[Vite](https://vitejs.dev/)**: Herramienta de frontend para el empaquetado y servidor de desarrollo.
 
